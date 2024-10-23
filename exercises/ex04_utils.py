@@ -4,6 +4,8 @@ __author__ = "730757297"
 
 
 def all(list1: list[int], num: int) -> bool:
+    if len(list1) == 0:
+        return False
     for item in list1:
         if item != num:
             return False
@@ -25,7 +27,7 @@ def max(list2: list[int]) -> int:
 
 def is_equal(list3: list[int], list4: list[int]) -> bool:
     if len(list3) != len(list4):
-        exit()  # if the length of list 3 does not equal the length of list 4, then exit the function
+        return False  # if the length of list 3 does not equal the length of list 4, then return false
     else:
         if (
             list3 != list4
